@@ -1,4 +1,6 @@
 # React + Vite
+### React Version --> 18.3.1
+### nodeJS version --> v20.11.1
 
 # Steps to run this project
 
