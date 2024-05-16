@@ -41,7 +41,7 @@ function ShowContacts() {
       console.log(xhr.status);
       if (xhr.status === 202) {
         console.log(xhr.responseText);
-        window.location.reload();
+        alertMsg(xhr.responseText);
       }
     };
     xhr.send();
@@ -57,9 +57,10 @@ function ShowContacts() {
         if (xhr.status === 200) {
           console.log(xhr.responseText);
           setIsEdit(false);
-          getInfos();
+          alertMsg(xhr.responseText);
         } else {
           console.error("Failed to update data");
+          alertMsg(xhr.responseText);
         }
       }
     };
@@ -95,6 +96,11 @@ function ShowContacts() {
     setState(record.address.state.replaceAll('"', ""));
     setCountry(record.address.country.replaceAll('"', ""));
     setPinCode(record.address.pinCode.replaceAll('"', ""));
+  }
+
+  function alertMsg(msg) {
+    alert(msg);
+    window.location.reload();
   }
 
   function setRecord(record, i) {
