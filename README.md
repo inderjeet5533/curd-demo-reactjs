@@ -18,10 +18,6 @@
 
     https://github.com/inderjeet5533/CURD_DEMO
 
-# To build project maven should be installed in your system.
-
-    run --> mvn clean install
-
 # To build docker image Docker should be installed in your system.
 
     docker build -t inderjeet5533/curd_demo_reactjs .
